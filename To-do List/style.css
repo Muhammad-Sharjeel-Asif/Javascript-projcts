@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(88deg, rgb(7, 7, 130), purple);
+}
+
+.container{
+    background-color: white;
+    margin: 5% 30% 0 25%;
+    border-radius: 10px;
+    padding: 0.5% 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    min-width: 300px;
+    max-width: 800px;
+}
+
+.container:hover{
+    box-shadow: 1.5px 2px 2px 3px black;
+}
+
+.input-todo{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin: 0 0.5%;
+}
+
+.input-todo input{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: large;
+    padding: 2% 0 2% 4%;
+}
+
+#AddBtn{
+    border: none;
+    background-color: orange;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    padding: 0px 5%;
+    font-size: large;
+}
+
+#AddBtn:hover{
+    background-color: rgba(225, 147, 2, 0.866);
+    border: none;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+#list-display{
+    text-align: justify;
+    list-style: none;
+    background-color: rgb(250, 250, 242);
+    padding: 4% 0 44% 0;
+    border-radius: 16px;
+    margin: 2% 0.5%;
+    font-size: 25px;
+}
+
+#list-display li{
+    margin: 2% 0 0 5%;
+}
+
+ul li{
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url(/unchecked-41.png);
+    background-size: cover;
+    background-position: center;
+    left: -30px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(/download.jpg);
+    color: #666;
+    height: 28px;
+    width: 28px;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    background-color: #e8e5e5;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #d8d0d0;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #list-display {
+        font-size: 20px;
+    }
+
+    .input-todo input {
+        font-size: medium;
+        padding: 1.5% 0 1.5% 3%;
+    }
+
+    #AddBtn {
+        font-size: medium;
+        padding: 0px 3%;
+    }
+
+    ul li span {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    #list-display {
+        font-size: 18px;
+    }
+
+    .container {
+        margin: 5% 2%;
+        padding: 2%;
+    }
+
+    .input-todo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-todo input {
+        width: 80%;
+    }
+
+    #AddBtn {
+        width: 80%;
+        margin-top: 10px;
+    }
+}
